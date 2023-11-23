@@ -29,7 +29,7 @@ function Github({items}) {
                     />
                   </div>
                   <div className="ml-3 w-100">
-                    <h4 className="mb-0 mt-0 textLeft">{items.login}</h4>
+                    <h4 className="mb-0 mt-0 textLeft text-center">{items.login}</h4>
                     <div className="p-1 mt-1 bg-secondary w-100 d-flex justify-content-between rounded text-white">
                       <div className="d-flex flex-column ">
                         <span className="articles">Articles</span>

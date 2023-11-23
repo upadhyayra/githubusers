@@ -1,7 +1,7 @@
 import React from "react";
 import Github from "./Github";
-import useFetch from "./useFetch";
-import Loading from "./assets/loading.gif"
+import useFetch from "../hooks/useFetch";
+import Loading from "../assets/loading.gif"
 
 const Home = () => {
 
@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-      <h2 className="bg-secondary mt-2 p-2 w-50 m-auto rounded">
+      <h2 className="bg-secondary mt-2 p-2 w-50 m-auto text-center rounded">
         List of GitHub Users
       </h2>
       <div className="container mt-5 ">
