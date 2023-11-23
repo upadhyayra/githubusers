@@ -1,5 +1,5 @@
 import React from "react";
-import Github from "./Github";
+import Github from "../components/Github";
 import useFetch from "../hooks/useFetch";
 import Loading from "../assets/loading.gif"
 
