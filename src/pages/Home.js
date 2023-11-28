@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Github from "../components/Github";
-import useFetch from "../hooks/useFetch";
-import Loading from "../assets/loading.gif"
+import useReq from "../hooks/useReq";
+import Loading from "../assets/loading.gif";
 
 const Home = () => {
+  const [users, setUsers] = useState([]);
+  const data = useReq();
 
-       const [data]=useFetch("https://api.github.com/users")
+  useEffect(() => {
+    data("https://api.github.com/users").then((res) => setUsers(res));
+  }, []);
 
   return (
     <>
@@ -30,15 +34,13 @@ const Home = () => {
               />
             </div>
           ) : (
-            
-            data && data.map((items) => <Github items={items} />)
+            users &&
+            users.map((items, index) => <Github items={items} key={items.id} />)
           )}
         </div>
       </div>
     </>
   );
-}
-
+};
 
 export default Home;
- 
