@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import useReq from "../hooks/useReq";
 
-function Github({ items }) {
+function UserCard({ items }) {
   const { login, avatar_url } = items;
   const [data, setData] = useState([]);
-  const foo = useReq();
+  const fetchData = useReq();
   useEffect(() => {
-    foo(items.url).then((res) => setData(res));
+    fetchData(items.url).then((res) => setData(res));
   }, []);
   const { public_repos, followers, following } = data;
 
@@ -45,4 +45,4 @@ function Github({ items }) {
   );
 }
 
-export default Github;
+export default UserCard;

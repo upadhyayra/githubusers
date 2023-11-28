@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Github from "../components/Github";
 import useReq from "../hooks/useReq";
 import Loading from "../assets/loading.gif";
+import UserCard from "../components/UserCard";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
@@ -35,7 +35,7 @@ const Home = () => {
             </div>
           ) : (
             users &&
-            users.map((items, index) => <Github items={items} key={items.id} />)
+            users.map((items, index) => <UserCard items={items} key={items.id} />)
           )}
         </div>
       </div>
